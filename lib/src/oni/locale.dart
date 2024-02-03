@@ -3,12 +3,11 @@ import 'package:flutter/widgets.dart';
 import '../oni/resource.dart';
 
 abstract class OniLocale {
-  final String? localeCode;
-  final String defaultCode;
+  final String? languageCode;
 
   abstract final OniResource resource;
 
-  OniLocale(this.localeCode, this.defaultCode);
+  OniLocale(this.languageCode);
 
   static T of<T extends OniLocale>(BuildContext context) {
     return Localizations.of(context, T);
