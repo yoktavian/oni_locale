@@ -1,8 +1,8 @@
+import 'package:example/src/locale/example_delegate.dart';
 import 'package:example/src/locale/example_locale.dart';
-import 'package:example/src/locale/example_locale_delegate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:oni_locale/main.dart';
+import 'package:oni_locale/oni.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
-        ExampleLocaleDelegate(),
+        ExampleDelegate(),
       ],
       home: const MyHomePage(title: 'Localization demo'),
     );
@@ -51,6 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(oniLocale.bookCollection),
+            Text(oniLocale.chairCollection("1")),
+            Text(oniLocale.chairCollection(2)),
+            Text(oniLocale.chairCollection(false)),
           ],
         ),
       ),

@@ -8,7 +8,7 @@ abstract class OniResource {
   String get(String key, {List<dynamic> args = const []}) {
     final resourceValue = resources[key];
     // If the locale code not registered, will use first map as a default value.
-    String? localizedValue = resourceValue?[localeCode] ?? resourceValue?[0];
+    String? localizedValue = resourceValue?[localeCode] ?? resourceValue?.values.elementAt(0);
     if (localizedValue == null) {
       throw Exception(
         'ERROR: Failed to provide $key value from resources. Have you registering the $key already?',
@@ -18,7 +18,7 @@ abstract class OniResource {
     // handled in the previous line.
     if (args.isNotEmpty) {
       for (var e in args) {
-        localizedValue = localizedValue!.replaceFirst('%s', e);
+        localizedValue = localizedValue!.replaceFirst('%s', e.toString());
       }
     }
 
