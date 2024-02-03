@@ -110,3 +110,8 @@ Widget build(BuildContext context) {
 So that's all for now. You could use this library to support localization or just to organized your string resources in elegant way for sure :).
 
 NOTES: If you already registering some supported languages, but when user using unsupported language, by default it will using the first order language in the template. For example in my template, the first order is `id` so for the user who using unsuported language on their device will get `id` language as their default langauge.
+
+
+DEMO:
+
+<video src='https://github.com/yoktavian/oni_locale/blob/main/demo.mov' width=180/>
