@@ -114,4 +114,4 @@ NOTES: If you already registering some supported languages, but when user using 
 
 DEMO:
 
-<video src='https://github.com/yoktavian/oni_locale/blob/main/demo.mov' width=180/>
+https://github.com/yoktavian/oni_locale/assets/23457234/763bfdea-a9a0-44e8-ae93-a1dbe36536e1
