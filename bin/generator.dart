@@ -56,11 +56,13 @@ void _createArbFileTemplate(File file) {
   String template = '''
 {
   "@@last_modified": "$dateTime",
-  "sample": {
-    "default": "Hello"
+  "bookCollection": {
+    "id": "buku",
+    "en": "book"
   },
-  "sampleWithArgument": {
-    "default": "Hello %s"
+  "chairCollection": {
+    "id": "kursi %s",
+    "en": "chair %s"
   }
 }
 ''';
